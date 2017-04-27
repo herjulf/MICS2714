@@ -1,3 +1,6 @@
+set term jpeg
+set output "mics2714-function.jpg"
+
 #set logscale xz
 m = 0.9886
 a = 7.3
