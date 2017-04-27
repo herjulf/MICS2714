@@ -1,2 +1,2 @@
 # MICS2714
-Transfer functions for Nitorgen sensor
+Transfer functions for Nitrogen sensor
