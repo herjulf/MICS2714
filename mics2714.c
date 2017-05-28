@@ -32,10 +32,15 @@ main()
 {
   double v0, no2, rsr0, vcc = 5;
 
-  for(v0 = 0.1; v0 <= 4.6; v0 += 0.5)  { 
+  for(v0 = 0.02; v0 <= 4.6; v0 += 0.1)  { 
     no2 = mics2714(vcc, v0, 0);
-    printf(" v0=%4.2f NO2=%4.2f ppm\n", v0, no2);
+    rsr0 = (vcc-v0)/v0;
+    printf(" v0=%4.2f rsr0=%4.2f NO2=%4.2f ppm\n", v0, rsr0, no2);
   }
+  v0 = 2.5;
+  no2 = mics2714(vcc, v0, 0);
+  rsr0 = (vcc-v0)/v0;
+  printf("Half v0=%4.2f rsr0=%4.2f NO2=%4.2f ppm\n", v0, rsr0, no2);
 }
 
 void print_function(void)
